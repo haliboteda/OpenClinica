@@ -11,14 +11,14 @@
     <modules>
         <module>core</module>
         <module>web</module>
-        <module>ws</module>
+        
     </modules>
 
     <properties>
         <!-- Default configuration activation -->
         <config.id>default</config.id>
 
-        <skipTests>false</skipTests>
+        <skipTests>true</skipTests>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <walkme.url>https://cdn.walkme.com/users/3a0ed96eac494dacb4de0640679973c0/walkme_3a0ed96eac494dacb4de0640679973c0_https.js</walkme.url>
 

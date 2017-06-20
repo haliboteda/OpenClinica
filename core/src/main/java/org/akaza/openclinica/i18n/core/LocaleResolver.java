@@ -50,11 +50,13 @@ public final class LocaleResolver {
 	 * @return
 	 */
 	public final static Locale getLocale(HttpServletRequest request) {
-	    Locale locale = getLocaleInSession(request.getSession(false));
+		//Edited by ll 20160811  cn will cause dateformat error  so just use US
+	    /*Locale locale = getLocaleInSession(request.getSession(false));
 	    if(locale == null) {
 	        return resolveLocale(request);
 	    }
-	    return locale;
+	    return locale;*/
+		return getDefaultLocale();
 	}
 
 	/*

@@ -124,6 +124,7 @@
 			</table>
 		</td>
 	</tr>
+	<input type="hidden" name="uniqueIdentifier" value="<c:out value="${uniqueIdentifier}"/>">
 	<c:choose>
 	<c:when test="${study.studyParameterConfig.subjectPersonIdRequired =='required'}">
 	<tr valign="top">
@@ -255,23 +256,23 @@
 	                        		<option value="f"><fmt:message key="female" bundle="${resword}"/></option>
                             	</c:otherwise>
                         	</c:choose>
-	                        </select>
-	            </td>
-	<td align="left">
-        <c:choose>
-        <c:when test="${study.studyParameterConfig.genderRequired !='false'}">
-           <span class="formlabel">*</span>
-        </c:when>
-        </c:choose>
-        <c:if test="${study.studyParameterConfig.discrepancyManagement=='true'}">
-	        <a href="#" onClick="openDSNoteWindow('CreateDiscrepancyNote?name=subject&field=gender&column=gender','spanAlert-gender'); return false;">
-	        <img name="flag_gender" src="images/icon_noNote.gif" border="0" alt="<fmt:message key="discrepancy_note" bundle="${resword}"/>" title="<fmt:message key="discrepancy_note" bundle="${resword}"/>"></a>
-	    </c:if>
-	</td>
-	</tr>
-	<tr>
-	<td colspan="2"><jsp:include page="../showMessage.jsp"><jsp:param name="key" value="gender"/></jsp:include></td>
-	</tr>
+	                    </select>
+	            	</td>
+					<td align="left">
+				        <c:choose>
+				        <c:when test="${study.studyParameterConfig.genderRequired !='false'}">
+				           <span class="formlabel">*</span>
+				        </c:when>
+				        </c:choose>
+				        <c:if test="${study.studyParameterConfig.discrepancyManagement=='true'}">
+					        <a href="#" onClick="openDSNoteWindow('CreateDiscrepancyNote?name=subject&field=gender&column=gender','spanAlert-gender'); return false;">
+					        <img name="flag_gender" src="images/icon_noNote.gif" border="0" alt="<fmt:message key="discrepancy_note" bundle="${resword}"/>" title="<fmt:message key="discrepancy_note" bundle="${resword}"/>"></a>
+					    </c:if>
+					</td>
+				</tr>
+				<tr>
+				<td colspan="2"><jsp:include page="../showMessage.jsp"><jsp:param name="key" value="gender"/></jsp:include></td>
+				</tr>
 			</table>
 		</td>
     </c:if>
